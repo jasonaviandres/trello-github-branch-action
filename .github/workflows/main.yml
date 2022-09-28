@@ -8,6 +8,6 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: jasonaviandres/trello-github-branch-action@v1.2
+        uses: jasonaviandres/trello-github-branch-action@v1.3
         with:
           who-to-greet: "Jason"
