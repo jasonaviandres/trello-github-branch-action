@@ -1,4 +1,7 @@
-on: create
+on: 
+  push:
+    branches:
+    - '**-**'
 
 jobs:
   hello_world_job:
