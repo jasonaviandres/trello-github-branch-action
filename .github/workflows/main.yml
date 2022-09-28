@@ -1,17 +1,12 @@
 on: push
 
 jobs:
-  create_trello_card_job: # ID of the job
-    runs-on: ubuntu-latest # Machine for the job
-    name: Create Trello Card # GitHub job name
-    steps: # Task within the job is called step
-      - name: Call trello-github-branch-action # GitHub name of the step
-        id: call-trello-github-branch-actions # Step identifier
-        uses: jasonaviandres/trello-github-branch-action@v1 # Action to execute. v1.0 is used
-        with: # Input parameters to pass to the action. Specifies the card creation method
-          trello-action: move_card_when_branch_created
-        env: # Environment variables used in actions. Set Trello information specified in Secrets
-          TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
-          TRELLO_API_TOKEN: ${{ secrets.TRELLO_API_TOKEN }}
-          TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
-          TRELLO_LIST_ID: ${{ secrets.TRELLO_BACKLOG_ID }}
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: jasonaviandres/github-trello-branch-action@v1
+        with:
+          who-to-greet: "Jason"
