@@ -1,6 +1,5 @@
 on:
-  issues: 
-    types: opened
+  create
 
 jobs:
   hello_world_job:
