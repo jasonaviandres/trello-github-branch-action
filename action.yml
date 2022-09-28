@@ -1,11 +1,10 @@
-name: "Link GitHub Issue and Pull Request with Trello Card"
-
-description: "You can link GitHub issues and pull request with Trello card."
+name: "hello world"
 
 inputs:
-  trello-action:
-    description: "Action to do"
+  who-to-greet:
+    description: "Who to greet"
     required: true
+    default: "world"
 
 runs:
   using: "node12"
