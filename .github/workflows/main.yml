@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest # Machine for the job
     name: Create Trello Card # GitHub job name
     steps: # Task within the job is called step
-      - name: Call trello-github-actions # GitHub name of the step
-        id: call-trello-github-actions # Step identifier
-        uses: jessicazu/trello-github-actions@v1.0 # Action to execute. v1.0 is used
+      - name: Call trello-github-branch-action # GitHub name of the step
+        id: call-trello-github-branch-actions # Step identifier
+        uses: jasonaviandres/trello-github-branch-actions@v1.0 # Action to execute. v1.0 is used
         with: # Input parameters to pass to the action. Specifies the card creation method
           trello-action: move_card_when_branch_created
         env: # Environment variables used in actions. Set Trello information specified in Secrets
