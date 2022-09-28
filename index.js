@@ -23,7 +23,7 @@ const moveCardWhenBranchCreated = (apiKey, apiToken, boardId) => {
   const departureListID = process.env["TRELLO_DEPARTURE_LIST_ID"];
   const destinationListID = process.env["TRELLO_DESTINATION_LIST_ID"];
   //this needs to be changed to branch name
-  console.log(github.context.payload);
+  console.log(JSON.stringify(github.context.payload));
 };
 
 // Fetch all labels from trello board
