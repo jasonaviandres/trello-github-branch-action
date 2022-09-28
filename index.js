@@ -4,7 +4,7 @@ const github = require("@actions/github");
 try {
   const nameToGreet = core.getInput("who-to-greet");
   console.log("Hello", nameToGreet);
-  console.log(JSON.stringify(github.context.payload.issue));
+  console.log(JSON.stringify(github.context.payload.action));
 } catch (err) {
   core.setFailed(err.message);
 }
